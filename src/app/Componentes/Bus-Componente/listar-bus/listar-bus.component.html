@@ -1,0 +1,28 @@
+<h3>Choferes</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Placa</th>
+            <th>Tipo de Bus</th>
+            <th>Revision</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of ListaBus">
+            <td>{{ obj.Codigo }}</td>
+            <td>{{ obj.Placa }}</td>
+            <td>{{ obj.TipoBus }}</td>
+            <td>{{ obj.Revision}}</td>
+            <td>{{ obj.Estado}}</td>
+            <td>
+                <button data-toggle="modal" data-target="#editClienteBus" class="btn btn-primary mx-3" (click)="EditarBus(obj)" >Editar</button>
+                <button class="btn btn-secondary" (click)="EliminarBus(obj)" >Eliminar</button>
+              
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+

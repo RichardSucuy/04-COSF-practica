@@ -1,0 +1,86 @@
+<div *ngIf="bus">
+    <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true" id="editClienteBus" 
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>
+              Modificar Chofer:
+  
+            </h3>
+            <form (ngSubmit)="Update()">
+              <div class="form-group">
+                <label for="Código">Código:</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  id="Código"
+                  name="Código"
+                  required
+                  [(ngModel)]="bus.Codigo"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="Placa">Placa:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Placa"
+                  name="Placa"
+                  required
+                  [(ngModel)]="bus.Placa"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="TipoBus">TipoBus:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="TipoBus"
+                  name="TipoBus"
+                  required
+                  [(ngModel)]="bus.TipoBus"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="Revision">Revision:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Revision"
+                  name="Revision"
+                  required
+                  [(ngModel)]="bus.Revision"
+                />
+              </div>
+              <div class="form-group">
+                <label for="Estado">Estado del vehiculo:</label>
+                <input
+                class="form-control"
+                type="text"
+                id="Estado"
+                name="Estado"
+                required
+                [(ngModel)]="bus.Estado"
+              />
+              </div>
+
+  
+              <button data-dismiss="modal" class="btn btn-primary" type="submit">Insertar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Cerrar
+                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

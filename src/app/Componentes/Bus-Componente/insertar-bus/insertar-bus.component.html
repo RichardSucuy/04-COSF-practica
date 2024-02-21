@@ -1,0 +1,86 @@
+<div
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+  id="addClienteBus" 
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>
+          Agregar Bus:
+        </h3>
+        <form >
+          <div class="form-group">
+            <label for="Codigo">Código:</label>
+            <input
+              class="form-control"
+              type="number"
+              id="Codigo"
+              name="Codigo"
+              required
+              [(ngModel)]="nuevo.Codigo"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Placa">Placa:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Placa"
+              name="Placa"
+              required
+              [(ngModel)]="nuevo.Placa"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Placa">Tipo de Bus:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="TipoBus"
+              name="TipoBus"
+              required
+              [(ngModel)]="nuevo.TipoBus"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Revision">Revision:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Revision"
+              name="Revision"
+              required
+              [(ngModel)]="nuevo.Revision"
+            />
+          </div>
+                   
+          <div class="form-group">
+            <label for="Estado">Estado del vehiculo:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Estado"
+              name="Estado"
+              required
+              [(ngModel)]="nuevo.Estado"
+            />
+          </div>
+
+
+
+
+          <button data-dismiss="modal" class="btn btn-primary" type="submit" (click)="Insert()" >Insertar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cerrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
